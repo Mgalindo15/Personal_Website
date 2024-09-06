@@ -1,0 +1,351 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.welcome_head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.welcome_head h1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: "Jersey 10", sans-serif;
+    text-align: center;
+}
+
+.welcome_head h1 span {
+    flex: 1;
+    text-align: center;
+    animation: magnification 6s infinite;
+}
+
+@media (max-width: 767px) {
+    .welcome_head h1 {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .flex-container {
+        margin-top: 3vh;
+    }
+    
+    .welcome_head h1 {
+        font-size: 3rem;
+    }
+}
+
+.jump_to_head {
+    margin-top: 9vh;
+}
+
+.jump_to_head h1 {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    position: relative;
+    margin-left: 29vw;
+}
+
+.jump_to_head h1 span {
+    opacity: 0;
+    animation: fadeIn 4s infinite, pulse 4s infinite;
+    display: inline-block;
+    transform-origin: center center;
+}
+
+
+.jump_to_head h1 span:nth-child(2) {
+    animation-delay: .1s;
+    opacity: 0;
+}
+
+.jump_to_head h1 span:nth-child(3) {
+    animation-delay: .2s;
+    opacity: 0;
+}
+
+@media (max-width: 767px) {
+   .jump_to_head {
+       justify-content: center;
+       padding-left: 3%;
+       padding-right: 5%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .jump_to_head h1 {
+            font-size: 2rem;
+    }
+}
+
+.menu_bar {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-left: 20%;
+    padding-right: 20%;
+    overflow: hidden;
+}
+
+.menu_bar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+.menu_bar h2 {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu_bar h2:hover {
+    animation: growth 0.3s forwards;
+}
+
+.hover_link {
+    text-decoration:none;
+    color:black;
+    position: relative;
+}
+
+.hover_link::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover_link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+@media (max-width: 767px) {
+    .menu_bar {
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-top: 0%;
+    width: 100%;
+    }
+
+    .menu_bar h2 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .menu_bar {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .menu_bar h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.image_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9vh;
+    
+}
+
+.image_border {
+    position: relative;
+    padding: 1vh;
+    border-style: solid;
+    border-width: thin;
+}
+
+.image_carousel {
+    position: relative;
+    width: 380px;
+    height: 425px;
+    overflow: hidden;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .image_carousel {
+        width: 80vw;
+        height: 50vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .image_carousel {
+        width: 60vw;
+        height: 50vh;
+    }
+}
+
+.bio_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 9vh;
+    width: 100%;
+}
+
+fieldset.info {
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    width: 36%;
+}
+
+.field_head {
+    font-weight: bold;
+    font-family: "Cormorant Garamond", serif;
+    text-align: center;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@media (max-width: 767px) {
+    fieldset.info {
+        width: 78vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    fieldset.info {
+        width: 78vw;
+        font-size: 1.6rem;
+    }  
+}
+
+.footer {
+    display: flex;
+    margin-top: 10px;
+    height: 100px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer p {
+    text-align: right;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 200;
+    font-size: 13px;
+}
+
+@keyframes magnification {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width 786px) {
+    magnification {
+        0% {
+        transform: scale(1);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+@keyframes growth {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    7% {
+        opacity: .25;
+    }
+    15% {
+        opacity: .5;
+    }
+    22% {
+        opacity: .75;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 50% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.25);
+    }
+    70% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.25);
+    }
+    90% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
