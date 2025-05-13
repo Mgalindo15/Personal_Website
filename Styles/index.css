@@ -1,351 +1,207 @@
-.flex-container {
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/star_tile1.png");
+    background-repeat: repeat repeat;
+    animation: driftStars 30s linear infinite;
+    font-family: 'EB Garamond', serif;
+    color: white;
+}
+
+.content_block {
+    width: 80vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: rgba(23, 23, 23, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.banner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2.5vh 1.5vw;
+    border-bottom: 2px solid black;
+}
+
+.site_title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5em;
+    color: rgba(255, 255, 255, 0.7); 
+    margin: 0;
+    margin-right: auto;
+    padding-left: 50px;
+    align-self: center;
+  }
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav li a {
+    text-decoration: none;
+}
+
+.logos_block {
+    height: 40px;
+    width: 40px;
+    display: block;
+    border-radius: 10px;
+}
+
+.logos_rect {
+    margin-top: 2px;
+    height: 37px;
+    width: 43px;
+    display: block;
+    border-radius: 10px;
+}
+
+.logos_block,
+.logos_rect {
+  transition: transform 0.2s ease;
+}
+
+.logos_block:hover,
+.logos_rect:hover {
+  transform: scale(1.15);
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 95px;
+    padding: 20px 0;
+    width: fit-content;
+    max-width: 100%;
+  }
+  
+.profile_column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-top: 2vh;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.welcome_head {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.welcome_head h1 {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 2.5rem;
-    font-weight: 400;
-    font-family: "Jersey 10", sans-serif;
-    text-align: center;
-}
-
-.welcome_head h1 span {
-    flex: 1;
-    text-align: center;
-    animation: magnification 6s infinite;
-}
-
-@media (max-width: 767px) {
-    .welcome_head h1 {
-        flex-direction: column;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .flex-container {
-        margin-top: 3vh;
-    }
-    
-    .welcome_head h1 {
-        font-size: 3rem;
-    }
-}
-
-.jump_to_head {
-    margin-top: 9vh;
-}
-
-.jump_to_head h1 {
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 30px;
-    position: relative;
-    margin-left: 29vw;
-}
-
-.jump_to_head h1 span {
-    opacity: 0;
-    animation: fadeIn 4s infinite, pulse 4s infinite;
+    align-items: center;
+    margin-left: 55px;
+    margin-top: 30px;
+  }
+  
+.profile {
+    width: 270px;
+    height: 350px;
+    padding: 10px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    animation: profileFloat 1s ease-out forwards;
+  }
+  
+.profile_link {
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+  
+.profile_link a {
     display: inline-block;
-    transform-origin: center center;
-}
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 6px 12px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+.profile_link a:hover {
+    border: 1px solid white;
+    border-radius: 4px;
+  }
 
-
-.jump_to_head h1 span:nth-child(2) {
-    animation-delay: .1s;
+.cv_swing {
+    animation: swingInLeft 1s ease-out 0.5s forwards;
     opacity: 0;
-}
+  }
 
-.jump_to_head h1 span:nth-child(3) {
-    animation-delay: .2s;
-    opacity: 0;
-}
-
-@media (max-width: 767px) {
-   .jump_to_head {
-       justify-content: center;
-       padding-left: 3%;
-       padding-right: 5%;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .jump_to_head h1 {
-            font-size: 2rem;
-    }
-}
-
-.menu_bar {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 50px;
-    padding-left: 20%;
-    padding-right: 20%;
-    overflow: hidden;
-}
-
-.menu_bar ul {
-    list-style-type: none;
+.bio_block {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0%;
-    margin: 0%;
+    align-items: flex-start;
+    gap: 55px;
+    margin-top: 30px;
+  }
+  
+.vertical_line {
+    width: 2px;
+    height: 0;
+    background-color: white;
+    animation: growLine 1s ease-out 1s forwards;
+  }
+  
+.text h2,
+.text p {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  visibility: hidden;
+  animation: typeText 1.1s steps(30, end) 1.5s forwards; 
 }
 
-.menu_bar h2 {
-    font-family: "Jersey 10", sans-serif;
-    font-size: 20px;
-    font-weight: lighter;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
 
-.menu_bar h2:hover {
-    animation: growth 0.3s forwards;
-}
-
-.hover_link {
-    text-decoration:none;
-    color:black;
-    position: relative;
-}
-
-.hover_link::after {
-    content:'';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 1px;
-    background-color: black;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease-in-out;
-}
-
-.hover_link:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-@media (max-width: 767px) {
-    .menu_bar {
-    padding-left: 0%;
-    padding-right: 0%;
-    margin-top: 0%;
-    width: 100%;
-    }
-
-    .menu_bar h2 {
-        font-size: 0.9rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .menu_bar {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    .menu_bar h2 {
-        font-size: 1.5rem;
-    }
-}
-
-.image_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 9vh;
-    
-}
-
-.image_border {
-    position: relative;
-    padding: 1vh;
-    border-style: solid;
-    border-width: thin;
-}
-
-.image_carousel {
-    position: relative;
-    width: 380px;
-    height: 425px;
-    overflow: hidden;
-}
-
-.carousel-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-}
-
-.carousel-image.active {
-    opacity: 1;
-}
-
-@media (max-width: 767px) {
-    .image_carousel {
-        width: 80vw;
-        height: 50vh;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .image_carousel {
-        width: 60vw;
-        height: 50vh;
-    }
-}
-
-.bio_text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 9vh;
-    width: 100%;
-}
-
-fieldset.info {
-    text-align: center;
-    font-family: "Cormorant Garamond", serif;
-    width: 36%;
-}
-
-.field_head {
-    font-weight: bold;
-    font-family: "Cormorant Garamond", serif;
-    text-align: center;
-    font-weight: 300;
-    font-style: normal;
-}
-
-@media (max-width: 767px) {
-    fieldset.info {
-        width: 78vw;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    fieldset.info {
-        width: 78vw;
-        font-size: 1.6rem;
-    }  
-}
-
-.footer {
-    display: flex;
-    margin-top: 10px;
-    height: 100px;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.footer p {
-    text-align: right;
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 200;
-    font-size: 13px;
-}
-
-@keyframes magnification {
+@keyframes driftStars {
     0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
+        background-position: 0 0;
     }
     100% {
-        transform: scale(1);
+        background-position: 100px -100px;
     }
 }
 
-@media (max-width 786px) {
-    magnification {
-        0% {
-        transform: scale(1);
-        }
-        50% {
-            transform: scale(1.5);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-}
 
-@keyframes growth {
+@keyframes profileFloat {
     0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.2);
-    }
-}
-
-@keyframes fadeIn {
-    0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
         opacity: 0;
     }
-    7% {
-        opacity: .25;
-    }
-    15% {
-        opacity: .5;
-    }
-    22% {
-        opacity: .75;
-    }
-    30% {
-        opacity: 1;
-    }
     100% {
+        top: 10%;
+        left: 5%;
+        transform: translate(0%, 0%) scale(1);
         opacity: 1;
     }
 }
 
-@keyframes pulse {
-    0%, 50% {
-        transform: scale(1);
-    }
-    60% {
-        transform: scale(1.25);
-    }
-    70% {
-        transform: scale(1);
-    }
-    80% {
-        transform: scale(1.25);
-    }
-    90% {
-        transform: scale(1);
+@keyframes swingInLeft {
+    0% {
+      transform: translateX(-100px) rotate(-3deg);
+      opacity: 0;
     }
     100% {
-        transform: scale(1);
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
     }
-}
+  }
+
+@keyframes growLine {
+    from {
+      height: 0;
+    }
+    to {
+      height: 420px;
+    }
+  }
+
+  @keyframes typeText {
+    from {
+      width: 0;
+      visibility: visible;
+      border-right: 2px solid white; 
+    }
+    to {
+      width: 100%;
+      visibility: visible;
+      border: none;
+    }
+  }

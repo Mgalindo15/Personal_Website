@@ -1,125 +1,79 @@
 <!-- Matt Galindo's Personal Website Landing Page -->
-<!-- Compress Components with Gzip -->
-<!-- Add Expires Headers -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!--for cross-platform scaling-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> mgalindo.me </title>
-    <!--link to css stylesheet-->
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matthew Galindo">
+    <meta name="description" content="Homepage for Matthew's Personal Website">
+    <!--links-->
     <link rel="stylesheet" href="Styles/index.css">
-    
-    <!--preconnect and import links to Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     
-    <!--defer link to javascript file-->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        const images = document.querySelectorAll('.carousel-image');
-
-        let currentIndex = 0;
-
-        function showNextImage() {
-            images[currentIndex].classList.remove('active');
-
-            currentIndex = (currentIndex + 1) % images.length;
-
-            images[currentIndex].classList.add('active');
-        }
-
-        setInterval(showNextImage, 3000);
-        });
-    </script>
 </head>
 
 <body>
-    <!--flex container for whole body-->
-    <div class="flex-container">
-        <!--container for WELCOME TO MATT's WEBSITE head-->
-        <div class="welcome_head">
-            <h1>
-                <span class="type_1">Welcome to</span>
-                <span class="type_2">Matt's</span>
-                <span class="type_3">Website</span>
-            </h1>
-        </div>
-        <!--container for JUMP TO head-->
-        <div class="jump_to_head">
-            <h1> 
-                <!--chopped up words for alt timing of flash animation-->
-                <span>Ju</span><span>mp</span> <span>to</span>
-            </h1>
-        </div>
-        <!--container for menu-bar links-->
-        <div class="menu_bar">
-            <ul>
-                <!--each link item has a hover class for css animation-->
-                <li><h2>
-                    <!--links to ID lower in page-->
-                    <a href="#about_me_text" class="hover_link">About Me</a>
-                </h2></li>
-                <li><h2>  
-                <a href="Pages/writing_port.html" class="hover_link">Writing Portfolio</a> 
-                </h2></li>
-                <li><h2>
-                    <a href="Pages/dev_port.html" class="hover_link">Developer Portfolio</a>
-                </h2></li>
-                <li><h2>
-                    <a href="Pages/research_pub.html" class="hover_link">Research &amp; Publications</a>
-                </h2></li>
-                <li><h2>
-                    <a href="Pages/edu_exp.html" class="hover_link">Education &amp; Experience</a>
-                </h2></li>
+    <div class="content_block">
+        <div class="banner">
+            <h1 class="site_title">Matt Galindo</h1>
+            <ul class="nav">
+                <li>
+                    <a href="https://github.com/Mgalindo15" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/gitty.png" alt="GitHub Logo" class="logos_block">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/weatherswriting/" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/insta.png" alt="Instagram Logo" class="logos_block">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@mattgalindo2223/featured" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/yt.png" alt="YT Logi" class="logos_rect">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/matt-galindo2/" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/linked.png" alt="GitHub Logo" class="logos_block">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.reddit.com/r/weatherswriting/" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/reddit.jpeg" alt="GitHub Logo" class="logos_block">
+                    </a>
+                </li>
             </ul>
         </div>
-            <!--container for image carousel-->
-            <div class="image_box">
-                <!--container which is padded and bordered-->
-                <div class="image_border">
-                    <!--images overlayed and alt set to opaque on interval in js-->
-                    <div class="image_carousel">
-                        <img src="Images/profile_cmu.jpg" alt="Image 1" class="carousel-image active">
-                        <img src="Images/thumbs_up.jpg" alt="Image 2" class="carousel-image">
-                        <img src="Images/cmu_office.jpg" alt="Image 3" class="carousel-image">
-                        <img src="Images/liu_linus.jpg" alt="Image 4" class="carousel-image">
-                        <img src="Images/group_arb.jpg" alt="Image 5" class="carousel-image">
-                        <img src="Images/paul_colin.png" alt="Image 6" class="carousel-image">
-                        <img src="Images/looking_down.jpg" alt="Image 7" class="carousel-image">
-                        <img src="Images/games_complex.jpg" alt="Image 8" class="carousel-image">
-                        <img src="Images/holding_sparkler.jpg" alt="Image 9" class="carousel-image">
-                        <img src="Images/jack_cut.jpg" alt="Image 10" class="carousel-image">
-                    </div>
+
+        <div class="head">
+            <div class="profile_column">
+              <img src="./images/pro2.png" alt="Profile" class="profile">
+              <div class="profile_link">
+                <p class="cv_swing">
+                    <a href="./assets/Matt_Galindo_CV_2025.pdf" target="_blank" rel="noopener noreferrer">
+                    View My CV
+                    </a>
+                </p>
+              </div>
+            </div>
+          
+            <div class="bio_block">
+                <div class="vertical_line"></div>
+                <div class="text">
+                  <h2>About Me</h2>
+                  <p>
+                    I'm Matthew Galindo, a computational linguist and lifelong learner...
+                  </p>
                 </div>
-        </div>
-        <!--container for bio-->
-        <div class="bio_text">
-            <a id="about_me_text"></a>
-            <fieldset class="info">
-                <legend>
-                    <h1 class="field_head" loading="lazy">About Me</h1>
-                </legend>
-                    When asked where I’m from, I’ll often respond by saying “the suburbs of Chicago”, but that answer doesn’t fully reflect the reality of the situation. My hometown is a growing suburb, but one that still carries that relaxed, easy-going lifestyle all suburbs seem to exude. The days pass with the same lethargy of the falling leaves which are ubiquitous throughout our little curated villages. To the north, the Wisconsin border promises mile-wide stretches of open fields, ready for plow. Meanwhile, an hour south is one of the great bastions of American industry, replete with thousand foot towers, billion-dollar businesses, and the familiar bustle of people in transit.  I often find myself not only physically straddled between these two worlds, but metaphorically as well.
-                    <br><br>
-                    On the one hand, I’m drawn to the calmness of nature. Whether that be listening to the soft patter of waves on a rock-bed, or scouting a field of fireflies against the backdrop of a tree-line, the peace of nature helps me recharge and reconnect with my roots. In the suburbs, time seems to slow, which helps when I’m working on writing projects. I’ve been writing poetry and short stories for around eight years now. Some have been published, others are pending publish. I’ve always enjoyed working on difficult projects in isolation, giving the evdeavor my full focus. But that doesn’t mean I don’t enjoy the company of others. In fact, it’s just the opposite.
-                    <br><br>
-                    In High School, I was on the soccer team. Then in college, I ran sprints in track. In both cases, I became close with my teammates, and I learned the value of cheering each other on. I also picked up playing Pickleball before it was cool (is it cool now?). There are a couple outdoor courts near our house and an indoor court at a local gym for when the weather turns cold. Outside of sports, I also have learned the value of teamwork in the work and education worlds. When I worked at Cafe Zupas as a Shift Lead, I walked a thin line between empathy and fairness. In most cases, listening to others can go a long way in developing the trust necessary to enforce a set of rules. I relearned this lesson recently at a Chinese Immersion summer camp. Communication is key.
-                    <br><br>
-                    And that’s why I’m impassioned to succeed. Language <i>is</i> my passion: from the beautiful art of prose and poetry, to the scientific approach of linguistics, up to computer languages and machine learning. I love the technical, puzzle-like nature of language, with its web of features, just waiting to be unspun; and the more you unravel language, the more you can unravel the mystery of others. I seek to discover others through language, and to then turn around and help facilitate their own discoveries.
-                    <br><br>
-                    I’m currently a senior at Lake Forest College, pursuing a Self-Designed Major in “Language and Logic” with the hopes to pursue a Master’s Degree is Computational Linguistics, with a specific emphasis on NLP. I plan to create software and Web Applications to facilitate language learning and interpretation, and I feel machine learning is the most effective way to do this in the modern age. While keeping up with my studies, I’m working as a Chinese tutor at Lake Forest College, as well as privately in person and online, with plans to add a TA-ship in Web Development to the work list in the near future.
-                    <br><br>
-            </fieldset>
-        </div>
-        <!--container for footer-->
-        <div class="footer">
-            <p>&copy; 2024 Matt Galindo. All rights reserved.</p>
-        </div>
+            </div>
+
+        
     </div>
 </body>
 </html>
