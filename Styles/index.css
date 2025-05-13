@@ -33,7 +33,7 @@ body {
     margin-right: auto;
     padding-left: 50px;
     align-self: center;
-  }
+}
 
 .nav {
     list-style: none;
@@ -77,10 +77,10 @@ body {
     flex-direction: row;
     align-items: flex-start;
     gap: 95px;
-    padding: 20px 0;
-    width: fit-content;
+    padding: 50px 0;
+    width: 100%;
     max-width: 100%;
-  }
+}
   
 .profile_column {
     display: flex;
@@ -88,7 +88,7 @@ body {
     align-items: center;
     margin-left: 55px;
     margin-top: 30px;
-  }
+}
   
 .profile {
     width: 270px;
@@ -97,12 +97,12 @@ body {
     border: 1px solid white;
     box-sizing: border-box;
     animation: profileFloat 1s ease-out forwards;
-  }
+}
   
 .profile_link {
     margin-top: 20px;
     margin-left: 100px;
-  }
+}
   
 .profile_link a {
     display: inline-block;
@@ -112,31 +112,31 @@ body {
     text-decoration: none;
     padding: 6px 12px;
     transition: background-color 0.3s, color 0.3s;
-  }
+}
   
 .profile_link a:hover {
     border: 1px solid white;
     border-radius: 4px;
-  }
+}
 
 .cv_swing {
     animation: swingInLeft 1s ease-out 0.5s forwards;
     opacity: 0;
-  }
+}
 
 .bio_block {
     display: flex;
     align-items: flex-start;
     gap: 55px;
     margin-top: 30px;
-  }
+}
   
 .vertical_line {
     width: 2px;
     height: 0;
     background-color: white;
     animation: growLine 1s ease-out 1s forwards;
-  }
+}
   
 .text h2,
 .text p {
@@ -145,6 +145,28 @@ body {
   width: 0;
   visibility: hidden;
   animation: typeText 1.1s steps(30, end) 1.5s forwards; 
+}
+
+.details_block {
+    margin-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+.overview_title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7em;
+    text-align: left;
+    margin: 80px 0px 0px 120px;
+    color: rgba(255, 255, 255, 0.7); 
+}
+
+.top_border {
+    height: 2px;
+    background-color: black;
+    width: 0;
+    margin: 0 auto;
+    animation: drawBorder 1.5s ease-out forwards;
 }
 
 
@@ -182,7 +204,7 @@ body {
       transform: translateX(0) rotate(0deg);
       opacity: 1;
     }
-  }
+}
 
 @keyframes growLine {
     from {
@@ -191,7 +213,7 @@ body {
     to {
       height: 420px;
     }
-  }
+}
 
   @keyframes typeText {
     from {
@@ -203,5 +225,14 @@ body {
       width: 100%;
       visibility: visible;
       border: none;
+    }
+  }
+
+  @keyframes drawBorder {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
     }
   }
