@@ -22,15 +22,14 @@ Interactive dropdown modules describe Matt’s core projects:
 - **Intentionality & Atomic Action Games**
   - An extension of his undergraduate action theory research.
   - Introduces a forthcoming book modeling agency via modal-scope atomic games.
-  - Links to papers on [Analytical Philosophy](./assets/Symmetry%20Theory%20of%20Vericfication.pdf) and [Action Theory](./assets/Toward%20a%20Unified%20Theory%20of%20Action.pdf).
-
+  - Links to papers on Analytical Philsopophy and Action Theory.
 - **Interpretability of Internet Language**
   - Examines mutation patterns in digital communication.
   - Proposes a supervised learning framework to track and predict the spread of new terms.
 
 - **Weathers Writing**
   - A pseudonymous portfolio of creative writing: poetry, sci-fi, and cross-linguistic verse.
-  - Links to published works like [Caught in a Webb](./assets/Caught%20in%20a%20Webb.pdf), [Genesis](./assets/Genesis.pdf), and [Instagram](./assets/Instagram.pdf).
+  - Links to published works.
   - Includes a hidden note on favorite fiction authors—click the **P.S.** to reveal!
 
 - **Redsettle**
