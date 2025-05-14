@@ -22,7 +22,7 @@ Interactive dropdown modules describe Matt’s core projects:
 - **Intentionality & Atomic Action Games**
   - An extension of his undergraduate action theory research.
   - Introduces a forthcoming book modeling agency via modal-scope atomic games.
-  - Links to papers on [Analytical Philosophy](./assets/Symmetry_Theory_of_Vericfication.pdf) and [Action Theory](./assets/Toward%20a%20Unified%20Theory%20of%20Action.pdf).
+  - Links to papers on [Analytical Philosophy](./assets/Symmetry%20Theory%20of%20Vericfication.pdf) and [Action Theory](./assets/Toward%20a%20Unified%20Theory%20of%20Action.pdf).
 
 - **Interpretability of Internet Language**
   - Examines mutation patterns in digital communication.
