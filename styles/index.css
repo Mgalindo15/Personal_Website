@@ -237,6 +237,28 @@ details summary {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.8);
 }
+
+.ps-inline {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.ps-inline summary {
+    display: inline;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.ps-inline p {
+    margin: 5px 0 0 20px;
+    font-style: normal;
+}
+
+.ps-inline::-webkit-details-marker {
+    display: none;
+}
+
   
 details {
     margin-top: 5px;
@@ -353,3 +375,235 @@ details {
       width: 100%;
     }
   }
+
+/* ------------- MEDIA QUERIES ------------ */
+
+/* LAPTOP & SMALL DESKTOP */
+@media (max-width: 1440px) {
+.content_block {
+    width: 90vw;
+    padding: 15px;
+}
+
+.site_title {
+    font-size: 2.2em;
+    padding-left: 30px;
+}
+
+.nav {
+    gap: 20px;
+}
+
+.profile {
+    width: 240px;
+    height: 310px;
+}
+
+.bio_block {
+    gap: 40px;
+}
+
+.head {
+    gap: 60px;
+    padding: 40px 0;
+}
+
+.overview_title {
+    margin: 60px 0 0 60px;
+    font-size: 1.6em;
+}
+}
+  
+/* TABLET */
+@media (max-width: 1024px) {
+.content_block {
+    width: 95vw;
+}
+
+.banner {
+    flex-wrap: wrap;
+    padding: 2vh 1vw;
+}
+
+.site_title {
+    font-size: 2em;
+    padding-left: 20px;
+}
+
+.nav {
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.head {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0;
+}
+
+.profile_column {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.bio_block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.text h2,
+.text p {
+    animation-delay: 1s;
+}
+
+.projects {
+    margin-left: 20px;
+    gap: 30px;
+}
+
+.overview_title {
+    margin: 40px 0 0 20px;
+}
+.overview_underline {
+    margin-left: 20px;
+    width: 120px;
+}
+}
+  
+/* PHONE */
+@media (max-width: 768px) {
+body {
+    background-position: center;
+}
+
+.banner {
+    justify-content: center;
+}
+
+.site_title {
+    font-size: 1.8em;
+    padding-left: 0;
+}
+
+.logos_block,
+.logos_rect {
+    height: 32px;
+    width: 32px;
+}
+
+.head {
+    padding: 20px 0;
+}
+
+.profile {
+    width: 200px;
+    height: 260px;
+}
+
+.profile_link {
+    margin-left: 0;
+}
+
+.bio_block {
+    padding: 0 10px;
+}
+
+.text p {
+    font-size: 0.9em;
+}
+
+.projects {
+    margin-left: 10px;
+    gap: 20px;
+}
+
+.title_headers {
+    font-size: 1.2em;
+}
+
+details summary {
+    font-size: 0.95em;
+}
+
+.overview_title {
+    margin: 30px 0 0 10px;
+    font-size: 1.4em;
+}
+.overview_underline {
+    margin-left: 10px;
+    width: 100px;
+}
+
+.foot {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 1vw;
+}
+
+.footer_link {
+    margin-right: 0;
+    font-size: 14px;
+}
+.tm {
+    font-size: 11px;
+}
+}
+
+/* --------------- POST PROCESSING PATCHES --------------- */
+  
+/* Vert bar adjustments*/
+@media (max-width: 1024px) {
+.vertical_line {
+    display: none;
+}
+}
+  
+/*  Mobil nav centering patch  */
+@media (max-width: 768px) {
+.banner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.site_title {
+    margin: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+.nav {
+    justify-content: center;
+    margin-top: 12px;
+}
+}
+
+/* Phone overflow patch */
+@media (max-width: 768px) {
+.content_block {
+    width: 95%;          
+    max-width: 480px;    
+    margin: 0 auto;      
+    padding: 10px;       
+    box-sizing: border-box;
+}
+
+/* allow re-wrapping */
+.text h2,
+.text p {
+    white-space: normal !important;  
+    width: auto !important;          
+    overflow: visible !important;
+    visibility: visible !important;
+    animation: none !important;    
+}
+
+/* 3) kill left over horizontal scroll */
+body {
+    overflow-x: hidden;
+}
+}
